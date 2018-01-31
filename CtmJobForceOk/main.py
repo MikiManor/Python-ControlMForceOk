@@ -7,7 +7,7 @@ import sys
 import getopt
 import os
 
-if __name__ == '__main__':
+def run():
     settings.init()
     argv = sys.argv[1:]
     try:
@@ -16,7 +16,6 @@ if __name__ == '__main__':
         if numOfArgs <= 1:
             raise Exception("no arguments sent! check it!", 9, logger.name)
         currentFileName = os.path.basename(__file__)
-
         try:
             opts, args = getopt.getopt(argv,'hv:', ["VarName="])
         except getopt.GetoptError as ge:
