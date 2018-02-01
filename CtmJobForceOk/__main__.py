@@ -9,7 +9,6 @@ import os
 
 def main():
     settings.init()
-    print(sys.argv)
     argv = sys.argv[2:]
     try:
         logger,logFile, errorFile = Utils.loggerUtil()
