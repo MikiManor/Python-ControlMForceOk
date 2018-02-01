@@ -6,6 +6,7 @@ dist/
 *.err
 *.error
 *.spec
+*egg-info
 
 # Repository specific
 Gonsole/
