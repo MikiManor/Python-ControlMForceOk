@@ -13,6 +13,11 @@ setup(
     ],
     install_requires=['UsefulUtilities'],
     python_requires='>=3',
-    packages = find_packages(),
+    packages = ['CtmJobForceOk'],
+    entry_points={
+        'console_scripts': [
+            'CtmJobForceOk = CtmJobForceOk.__main__:main'
+        ]
+    },
     )
 
