@@ -1,5 +1,6 @@
-from UsefulUtilities import Utils
 import subprocess as subp
+from UsefulUtilities import Utils
+
 
 
 def run(commandToExecute):
@@ -9,7 +10,7 @@ def run(commandToExecute):
         out, err = ctmpsmOutput.communicate()
         splittedLines = out.splitlines()
         rc = ctmpsmOutput.returncode
-        if rc != 0 :
+        if rc != 0:
             errors = "\n".join([str(x.decode('ascii')) for x in err.splitlines()])
             output = "\n".join([str(x.decode('ascii')) for x in out.splitlines()])
             if errors:

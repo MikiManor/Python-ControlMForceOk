@@ -18,7 +18,8 @@ def run():
                     line = line.decode('ascii').split()
                     #varsTable.append(line)
                     if line:  # Check if the line is not empty
-                        if settings.varName == line[0]:  # Every line (which not empty includes the var name at the first field)
+                        # Every line (which not empty includes the var name at the first field)
+                        if settings.varName == line[0]:
                             isFound = True
                             logger.info("< {} > ".format(settings.varName) + "Found the following line : " + str(line))
                             neededVarExpr = line[1]
@@ -34,6 +35,6 @@ def run():
             else:
                 return(neededVarExpr)
         else:
-            raise Exception("Returned empty list from command : {}".format(ctmvarCommand), logger.name )
+            raise Exception("Returned empty list from command : {}".format(ctmvarCommand), logger.name)
     except Exception as e:
         raise
