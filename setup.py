@@ -3,7 +3,7 @@ import os,sys
 
 setup(
     name = "CtmJobForceOk",
-    version = "1.0",
+    version = "1.1",
     author="Miki Manor",
     author_email="mmanor@isracard.co.il",
     description="utility fom ControlM which gets var name, traslate the var to Order Id and then Force Ok The job",
